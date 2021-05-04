@@ -14,3 +14,11 @@
 
 # this repo is on the container plan by default
 BUILD_WITH_CONTAINER ?= 1
+
+# version of `build-tools` that corresponds to Istio 1.7.6 + patch that brings back support for k8s 1.15
+# see https://github.com/tetrateio/istio-tools/tree/release-1.7.6
+IMG ?= docker.io/tetrate/build-tools:release-1.7.6-2021-05-04T12-33-39
+
+# if enabled, will verify that schema definitions match between versions (ie. v1alpha3 & v1beta1).
+# only works with apiextensions.k8s.io/v1 kubernetes api (not with v1beta1)
+VERIFY_CRDS_SCHEMA ?= 0
