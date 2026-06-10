@@ -6639,7 +6639,7 @@ spec:
                           description: |-
                             Determines how the patch should be applied.
 
-                            Valid Options: MERGE, ADD, REMOVE, INSERT_BEFORE, INSERT_AFTER, INSERT_FIRST, REPLACE
+                            Valid Options: MERGE, ADD, REMOVE, INSERT_BEFORE, INSERT_AFTER, INSERT_FIRST, REPLACE, MERGE_AND_REPLACE_LIST
                           enum:
                           - INVALID
                           - MERGE
@@ -6649,6 +6649,7 @@ spec:
                           - INSERT_AFTER
                           - INSERT_FIRST
                           - REPLACE
+                          - MERGE_AND_REPLACE_LIST
                           type: string
                         value:
                           description: The JSON config of the object being patched.
